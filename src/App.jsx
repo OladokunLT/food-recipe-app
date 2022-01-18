@@ -2,6 +2,7 @@ import './App.css';
 import {useState} from "react";
 import Axios from "axios"; 
 import Recipetile from './recipetile/Recipetile';
+import "./App.css";
 
 function App() {
   const YOUR_APP_ID = "ac0ccfac";
@@ -107,7 +108,7 @@ function App() {
           onClick={onSubmit}
         />
       </form>
-      <div>
+      <div className='App_recipes'>
         {recipes.map((recipe) => {
           return < Recipetile recipe={recipe} />;
         })}

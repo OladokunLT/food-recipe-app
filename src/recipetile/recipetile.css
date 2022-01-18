@@ -12,5 +12,7 @@
     border-radius: 5px;
 }
 .recipeTile_name {
-    
+    max-width: 200;
+    text-align: center;
+    margin: 12px 0;
 }
