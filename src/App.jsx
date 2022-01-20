@@ -32,17 +32,17 @@ function App() {
   return (
     <div className="app">
       <h1 onClick={getRecipeInfo}>
-        <u>Food Recipe Generator</u> 🤔 🍅
+        Food Recipe Generator <span> 🐟 🍅 🥕</span>
       </h1>
       <form className="app_searchForm" action=''>
         <input type="text" 
-          placeholder="enter the ingredient"  
-          className="app_input" 
+          placeholder="Enter the ingredient(s) e.g Onion, egg, cabbage etc"  
+          className="app_input app_input_sm" 
           autoComplete='off'
           onChange={search_value}
           value={query}
         />
-        <select className="app_healthLabels">
+        <select className="app_healthLabels app_input_sm">
           <option
             value="vegan"
             onClick={() => {
@@ -104,7 +104,7 @@ function App() {
         
         <input type="submit" 
           value="Get Recipe" 
-          className="app_submit"
+          className="app_submit app_input_sm"
           onClick={onSubmit}
         />
       </form>
@@ -113,6 +113,9 @@ function App() {
           return < Recipetile recipe={recipe} />;
         })}
       </div>
+      <footer className='footer'>
+        <small>&copy; 2022. lukupay@gmail.com</small>
+      </footer>
     </div>
 
   );
